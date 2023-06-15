@@ -41,7 +41,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User update(UserDTO userDTO) {
-        userUnregistered(userDTO);
+//        userUnregistered(userDTO);
         findByEmail(userDTO);
         return repository.save(mapper.map(userDTO, User.class));
     }
