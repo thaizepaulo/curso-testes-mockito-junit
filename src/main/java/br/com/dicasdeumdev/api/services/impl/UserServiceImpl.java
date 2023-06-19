@@ -58,12 +58,4 @@ public class UserServiceImpl implements UserService {
             throw new DataIntegratyViolationException("E-Mail já cadastrado no sistema.");
         }
     }
-
-    private void userUnregistered(UserDTO userDTO) {
-        Optional<User> user = repository.findById(userDTO.getId());
-        if (user.isEmpty()) {
-            throw new DataIntegratyViolationException("Usuário não cadastrado.");
-        }
-    }
-
 }
